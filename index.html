@@ -37,10 +37,11 @@
 </nav>
 
 <!-- Hero -->
-  <div class="glow glow-1"></div>
-<div class="glow glow-2"></div>
+ 
 
 <section class="min-h-screen flex items-center justify-center pt-20 hero">
+   <div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
 
   <div class="text-center">
 
@@ -114,26 +115,27 @@
 
 <!-- Projects -->
 <section id="projects" class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-10">Projects</h2>
 
-  <h2 class="text-4xl font-bold text-center mb-10">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="project-card p-6">
+        AI Data Analyzer
+      </div>
 
-  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="project-card p-6">
+        Automation Dashboard
+      </div>
 
-    <div class="project-card p-6">
-      AI Data Analyzer
-    </div>
-
-    <div class="project-card p-6">
-      Automation Dashboard
-    </div>
-
-    <div class="project-card p-6">
-      Physics Simulator
+      <div class="project-card p-6">
+        Physics Simulator
+      </div>
     </div>
 
   </div>
-
 </section>
+
+  
 
 <!-- Contact -->
 <section id="contact" class="py-20 bg-gray-800 text-center">
@@ -155,10 +157,8 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./js/main.js"></script>
 
-<script>
-  AOS.init();
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+
+
 
 </body>
 </html>
