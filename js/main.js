@@ -97,6 +97,16 @@ if (steps.length) {
   window.addEventListener("scroll", activateClosest, { passive: true });
   window.addEventListener("resize", activateClosest);
 }
+const g1 = document.querySelector(".glow-1");
+const g2 = document.querySelector(".glow-2");
+
+if (g1 && g2) {
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY || 0;
+    g1.style.transform = `translate3d(0, ${y * 0.05}px, 0)`;
+    g2.style.transform = `translate3d(0, ${y * -0.04}px, 0)`;
+  }, { passive: true });
+}
 
 
 // =========================
