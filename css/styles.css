@@ -248,3 +248,30 @@ body {
 footer {
   font-size: 0.875rem;
 }
+
+/* ===== Parallax glow blobs ===== */
+.hero { position: relative; overflow: hidden; }
+
+.glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  filter: blur(60px);
+  opacity: 0.25;
+  border-radius: 999px;
+  transform: translateZ(0);
+  pointer-events: none;
+}
+
+.glow-1 {
+  left: -120px;
+  top: -140px;
+  background: radial-gradient(circle, rgba(59,130,246,1), transparent 60%);
+}
+
+.glow-2 {
+  right: -160px;
+  bottom: -200px;
+  background: radial-gradient(circle, rgba(99,102,241,1), transparent 60%);
+}
+
