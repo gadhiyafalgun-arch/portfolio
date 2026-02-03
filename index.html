@@ -1,337 +1,251 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Falgun | Applied Data & AI Systems Analyst</title>
+
+  <meta name="description" content="Portfolio of Falgun - Applied Data & AI Systems Analyst with Physics Background" />
+  <meta name="keywords" content="Falgun, Data, AI, Physics, Portfolio, Python, Automation" />
+
+  <!-- Tailwind CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- Favicon (optional - only works if you add assets folder) -->
+  <link rel="icon" href="./assets/icons/favicon.ico" />
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Falgun | Applied Data &amp; AI Systems Analyst&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Portfolio of Falgun - Applied Data &amp; AI Systems Analyst with Physics Background" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="keywords" content="Falgun, Data, AI, Physics, Portfolio, Python, Automation" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Tailwind CDN --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- AOS CSS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Custom CSS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="css/styles.css" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Favicon --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="icon" href="assets/icons/favicon.ico" /&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body class="bg-gray-900 text-white"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Scroll Progress --&gt;</p>
-<p class="p1">&lt;div id="scroll-progress" class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Navbar --&gt;</p>
-<p class="p1">&lt;nav class="bg-gray-800 shadow-lg fixed w-full z-40"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="flex justify-between h-16"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Logo --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" class="text-xl font-bold text-white"&gt;Falgun&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Desktop Menu --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hidden md:flex items-center space-x-4"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#about" class="nav-link"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#skills" class="nav-link"&gt;Skills&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#projects" class="nav-link"&gt;Projects&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact" class="nav-link"&gt;Contact&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="resume.pdf" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Resume</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Mobile Button --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="md:hidden flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"</p>
-<p class="p1"><span class="Apple-converted-space">              </span>d="M4 6h16M4 12h16M4 18h16" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Mobile Menu --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="mobile-menu" class="md:hidden hidden bg-gray-800 border-t border-gray-700"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="px-4 py-3 space-y-2"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#about" class="mobile-link"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#skills" class="mobile-link"&gt;Skills&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#projects" class="mobile-link"&gt;Projects&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact" class="mobile-link"&gt;Contact&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="resume.pdf"</p>
-<p class="p1"><span class="Apple-converted-space">          </span>class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Resume</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Hero --&gt;</p>
-<p class="p1">&lt;section class="hero min-h-screen flex items-center justify-center pt-20" data-aos="fade-in"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-4xl mx-auto text-center px-4"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="zoom-in"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Hi, I'm Falgun</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-xl md:text-2xl mb-6" data-aos="fade-up" data-aos-delay="200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Applied Data &amp; AI Systems Analyst</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-lg mb-10 text-gray-300" data-aos="fade-up" data-aos-delay="400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Turning complex data and ideas into intelligent, automated systems.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="space-x-4" data-aos="fade-up" data-aos-delay="600"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#projects"</p>
-<p class="p1"><span class="Apple-converted-space">        </span>class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-medium"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>View Work</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#contact"</p>
-<p class="p1"><span class="Apple-converted-space">        </span>class="border border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-md text-lg font-medium"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Contact</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- About --&gt;</p>
-<p class="p1">&lt;section id="about" class="py-20 bg-gray-900"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-4xl mx-auto text-center px-4"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="text-4xl font-bold mb-8" data-aos="fade-up"&gt;About Me&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-lg text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>I’m a physics-trained, AI-native builder who turns messy, real-world data into clear insights and automated workflows.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>I enjoy taking problems from pattern → model → tool and shipping useful systems fast.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Skills --&gt;</p>
-<p class="p1">&lt;section id="skills" class="py-20 bg-gray-800"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-7xl mx-auto px-4 text-center"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="text-4xl font-bold mb-12" data-aos="fade-up"&gt;Skills&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid grid-cols-2 md:grid-cols-4 gap-8"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card" data-aos="fade-up"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-4xl mb-3"&gt;🐍&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Python&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Automation &amp; Scripting&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card" data-aos="fade-up" data-aos-delay="200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-4xl mb-3"&gt;📊&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Data Analysis&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Pattern Discovery&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card" data-aos="fade-up" data-aos-delay="400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-4xl mb-3"&gt;🤖&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;AI Prompting&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;System Design&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="skill-card" data-aos="fade-up" data-aos-delay="600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-4xl mb-3"&gt;⚙️&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Automation&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Workflow Optimization&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Projects --&gt;</p>
-<p class="p1">&lt;section id="projects" class="py-20 bg-gray-900"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-7xl mx-auto px-4"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Projects</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Project 1 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card" data-aos="fade-up"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/images/project1.jpg" class="w-full h-48 object-cover"</p>
-<p class="p1"><span class="Apple-converted-space">          </span>onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 hidden"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="p-6"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-xl font-semibold mb-2"&gt;AI Data Analyzer&lt;/h3&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-gray-300 mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Automated data analysis using AI-powered workflows.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button onclick="openModal('modal1')" class="btn-primary"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>View Details</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Project 2 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card" data-aos="fade-up" data-aos-delay="200"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/images/project2.jpg" class="w-full h-48 object-cover"</p>
-<p class="p1"><span class="Apple-converted-space">          </span>onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 hidden"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="p-6"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-xl font-semibold mb-2"&gt;Automation Dashboard&lt;/h3&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-gray-300 mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Web-based automation system.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button onclick="openModal('modal2')" class="btn-primary"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>View Details</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Project 3 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="project-card" data-aos="fade-up" data-aos-delay="400"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="assets/images/project3.jpg" class="w-full h-48 object-cover"</p>
-<p class="p1"><span class="Apple-converted-space">          </span>onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 hidden"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="p-6"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-xl font-semibold mb-2"&gt;Physics Simulator&lt;/h3&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-gray-300 mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Interactive physics modeling tool.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;button onclick="openModal('modal3')" class="btn-primary"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>View Details</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Contact --&gt;</p>
-<p class="p1">&lt;section id="contact" class="py-20 bg-gray-800"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-4xl mx-auto text-center px-4"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="text-4xl font-bold mb-8" data-aos="fade-up"&gt;Contact&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="text-lg mb-8 text-gray-300" data-aos="fade-up" data-aos-delay="200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Let’s build something meaningful together.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="flex justify-center space-x-6 mb-8" data-aos="fade-up" data-aos-delay="400"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="mailto:your@email.com" class="contact-link"&gt;Email&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" class="contact-link"&gt;GitHub&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" class="contact-link"&gt;LinkedIn&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Footer --&gt;</p>
-<p class="p1">&lt;footer class="py-8 bg-gray-900 text-center text-gray-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>© &lt;span id="year"&gt;&lt;/span&gt; Falgun</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Modals --&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="modal-content bg-gray-800 rounded-lg p-8 max-w-2xl w-full mx-4 overflow-y-auto" style="max-height:90vh;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="closeModal('modal1')" class="float-right text-xl"&gt;&amp;times;&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;AI Data Analyzer&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Automated large-scale data workflows using Python and AI.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="modal-content bg-gray-800 rounded-lg p-8 max-w-2xl w-full mx-4 overflow-y-auto" style="max-height:90vh;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="closeModal('modal2')" class="float-right text-xl"&gt;&amp;times;&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;Automation Dashboard&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Real-time automation platform.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="modal-content bg-gray-800 rounded-lg p-8 max-w-2xl w-full mx-4 overflow-y-auto" style="max-height:90vh;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="closeModal('modal3')" class="float-right text-xl"&gt;&amp;times;&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;Physics Simulator&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Simulation system for experiments.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- Scripts --&gt;</p>
-<p class="p1">&lt;script src="https://unpkg.com/aos@2.3.1/dist/aos.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;script src="js/main.js"&gt;&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<body class="bg-gray-900 text-white">
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 z-50"></div>
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 shadow-lg fixed w-full z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex justify-between h-16">
+
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#" class="text-xl font-bold text-white">Falgun</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+
+          <a href="resume.pdf" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+            Resume
+          </a>
+        </div>
+
+        <!-- Mobile Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+            <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-gray-800 border-t border-gray-700">
+        <div class="px-4 py-3 space-y-2">
+          <a href="#about" class="mobile-link">About</a>
+          <a href="#skills" class="mobile-link">Skills</a>
+          <a href="#projects" class="mobile-link">Projects</a>
+          <a href="#contact" class="mobile-link">Contact</a>
+
+          <a href="resume.pdf"
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+            Resume
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero min-h-screen flex items-center justify-center pt-20" data-aos="fade-in">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="zoom-in">
+        Hi, I'm Falgun
+      </h1>
+
+      <p class="text-xl md:text-2xl mb-6" data-aos="fade-up" data-aos-delay="200">
+        Applied Data & AI Systems Analyst
+      </p>
+
+      <p class="text-lg mb-10 text-gray-300" data-aos="fade-up" data-aos-delay="400">
+        Turning complex data and ideas into intelligent, automated systems.
+      </p>
+
+      <div class="space-x-4" data-aos="fade-up" data-aos-delay="600">
+        <a href="#projects"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-medium">
+          View Work
+        </a>
+
+        <a href="#contact"
+          class="border border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-md text-lg font-medium">
+          Contact
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">About Me</h2>
+      <p class="text-lg text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        I’m a physics-trained, AI-native builder who turns messy, real-world data into clear insights and automated workflows.
+        I enjoy taking problems from pattern → model → tool and shipping useful systems fast.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">Skills</h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="skill-card" data-aos="fade-up">
+          <div class="text-4xl mb-3">🐍</div>
+          <h3>Python</h3>
+          <p>Automation & Scripting</p>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-3">📊</div>
+          <h3>Data Analysis</h3>
+          <p>Pattern Discovery</p>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="text-4xl mb-3">🤖</div>
+          <h3>AI Prompting</h3>
+          <p>System Design</p>
+        </div>
+
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="text-4xl mb-3">⚙️</div>
+          <h3>Automation</h3>
+          <p>Workflow Optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="project-card" data-aos="fade-up">
+          <img src="./assets/images/project1.jpg" class="w-full h-48 object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 hidden"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">AI Data Analyzer</h3>
+            <p class="text-gray-300 mb-4">Automated data analysis using AI-powered workflows.</p>
+            <button onclick="openModal('modal1')" class="btn-primary">View Details</button>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="./assets/images/project2.jpg" class="w-full h-48 object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 hidden"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Automation Dashboard</h3>
+            <p class="text-gray-300 mb-4">Web-based automation system.</p>
+            <button onclick="openModal('modal2')" class="btn-primary">View Details</button>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="./assets/images/project3.jpg" class="w-full h-48 object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 hidden"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Physics Simulator</h3>
+            <p class="text-gray-300 mb-4">Interactive physics modeling tool.</p>
+            <button onclick="openModal('modal3')" class="btn-primary">View Details</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Contact</h2>
+      <p class="text-lg mb-8 text-gray-300" data-aos="fade-up" data-aos-delay="200">
+        Let’s build something meaningful together.
+      </p>
+
+      <div class="flex justify-center space-x-6 mb-8" data-aos="fade-up" data-aos-delay="400">
+        <a href="mailto:your@email.com" class="contact-link">Email</a>
+        <a href="#" class="contact-link">GitHub</a>
+        <a href="#" class="contact-link">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-gray-900 text-center text-gray-400">
+    © <span id="year"></span> Falgun
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="modal-content bg-gray-800 rounded-lg p-8 max-w-2xl w-full mx-4 overflow-y-auto" style="max-height:90vh;">
+      <button onclick="closeModal('modal1')" class="float-right text-xl">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">AI Data Analyzer</h3>
+      <p>Automated large-scale data workflows using Python and AI.</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="modal-content bg-gray-800 rounded-lg p-8 max-w-2xl w-full mx-4 overflow-y-auto" style="max-height:90vh;">
+      <button onclick="closeModal('modal2')" class="float-right text-xl">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">Automation Dashboard</h3>
+      <p>Real-time automation platform.</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="modal-content bg-gray-800 rounded-lg p-8 max-w-2xl w-full mx-4 overflow-y-auto" style="max-height:90vh;">
+      <button onclick="closeModal('modal3')" class="float-right text-xl">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">Physics Simulator</h3>
+      <p>Simulation system for experiments.</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/main.js"></script>
+
 </body>
 </html>
