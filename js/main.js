@@ -6,12 +6,11 @@ function lockScroll(lock) {
 }
 
 // =========================
-// Modals (called from HTML onclick)
+// Modals (optional - safe if unused)
 // =========================
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
   if (!modal) return;
-
   modal.classList.add("is-open");
   lockScroll(true);
 }
@@ -19,15 +18,12 @@ function openModal(modalId) {
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   if (!modal) return;
-
   modal.classList.remove("is-open");
 
   // If no other modal is open, unlock scroll
-  const anyOpen = document.querySelector(".modal.is-open");
-  if (!anyOpen) lockScroll(false);
+  if (!document.querySelector(".modal.is-open")) lockScroll(false);
 }
 
-// Make modal functions available globally (for inline onclick)
 window.openModal = openModal;
 window.closeModal = closeModal;
 
@@ -35,7 +31,7 @@ window.closeModal = closeModal;
 // DOM Ready
 // =========================
 document.addEventListener("DOMContentLoaded", function () {
-  // AOS Init (safe)
+  // AOS Init
   if (window.AOS) {
     AOS.init({
       duration: 800,
@@ -48,82 +44,88 @@ document.addEventListener("DOMContentLoaded", function () {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
+  // Story steps
+  const steps = Array.from(document.querySelectorAll(".step"));
 
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
+  const activateClosestStep = () => {
+    if (!steps.length) return;
 
-    // Close mobile menu when a link is clicked
-    mobileMenu.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
-    });
-  }
-
-  // Scroll progress bar
-  const scrollProgress = document.getElementById("scroll-progress");
-  if (scrollProgress) {
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const ratio = docHeight > 0 ? scrollTop / docHeight : 0;
-
-      scrollProgress.style.transform = `scaleX(${ratio})`;
-    });
-  }
-});
-// Apple-ish sticky story: highlight the step closest to viewport center
-const steps = Array.from(document.querySelectorAll(".step"));
-if (steps.length) {
-  const activateClosest = () => {
     const mid = window.innerHeight * 0.5;
-    let best = { el: null, dist: Infinity };
+    let bestEl = null;
+    let bestDist = Infinity;
 
     steps.forEach((el) => {
       const r = el.getBoundingClientRect();
       const center = r.top + r.height * 0.5;
       const dist = Math.abs(center - mid);
-      if (dist < best.dist) best = { el, dist };
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestEl = el;
+      }
     });
 
     steps.forEach((el) => el.classList.remove("is-active"));
-    if (best.el) best.el.classList.add("is-active");
+    if (bestEl) bestEl.classList.add("is-active");
   };
 
-  activateClosest();
-  window.addEventListener("scroll", activateClosest, { passive: true });
-  window.addEventListener("resize", activateClosest);
-}
-const g1 = document.querySelector(".glow-1");
-const g2 = document.querySelector(".glow-2");
+  // Glow parallax
+  const g1 = document.querySelector(".glow-1");
+  const g2 = document.querySelector(".glow-2");
 
-if (g1 && g2) {
-  window.addEventListener("scroll", () => {
-    const y = window.scrollY || 0;
-    g1.style.transform = `translate3d(0, ${y * 0.05}px, 0)`;
-    g2.style.transform = `translate3d(0, ${y * -0.04}px, 0)`;
-  }, { passive: true });
-}
+  // Scroll progress bar
+  const scrollProgress = document.getElementById("scroll-progress");
 
+  const onScroll = () => {
+    // progress
+    if (scrollProgress) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = docHeight > 0 ? scrollTop / docHeight : 0;
+      scrollProgress.style.transform = `scaleX(${ratio})`;
+    }
 
-// =========================
-// Global events (outside click + ESC)
-// =========================
+    // glow parallax
+    if (g1 && g2) {
+      const y = window.scrollY || 0;
+      g1.style.transform = `translate3d(0, ${y * 0.05}px, 0)`;
+      g2.style.transform = `translate3d(0, ${y * -0.04}px, 0)`;
+    }
 
-// Close modal on outside click
-window.addEventListener("click", function (event) {
-  if (event.target.classList && event.target.classList.contains("modal")) {
-    event.target.classList.remove("is-open");
+    // story highlight
+    activateClosestStep();
+  };
 
-    const anyOpen = document.querySelector(".modal.is-open");
-    if (!anyOpen) lockScroll(false);
+  // Run once on load
+  onScroll();
+
+  // Attach listeners
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+
+  // (Optional) Mobile menu — only if you have those IDs in HTML
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    });
   }
 });
 
-// Close modal on ESC
+// =========================
+// Global events
+// =========================
+window.addEventListener("click", function (event) {
+  if (event.target.classList && event.target.classList.contains("modal")) {
+    event.target.classList.remove("is-open");
+    if (!document.querySelector(".modal.is-open")) lockScroll(false);
+  }
+});
+
 window.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     document.querySelectorAll(".modal.is-open").forEach((modal) => {
