@@ -47,9 +47,39 @@ body {
 
 .hero {
   background:
-    linear-gradient(135deg, rgba(31,41,55,0.95), rgba(17,24,39,0.95)),
-    radial-gradient(circle at top left, rgba(59,130,246,0.15), transparent 60%);
+    linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.95)),
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.15), transparent 60%);
 }
+
+/* ===== Parallax glow blobs ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  filter: blur(60px);
+  opacity: 0.25;
+  border-radius: 999px;
+  transform: translateZ(0);
+  pointer-events: none;
+}
+
+.glow-1 {
+  left: -120px;
+  top: -140px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 1), transparent 60%);
+}
+
+.glow-2 {
+  right: -160px;
+  bottom: -200px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 1), transparent 60%);
+}
+
 /* ===== Apple-ish scroll story ===== */
 .story {
   background: #0b1220;
@@ -91,8 +121,8 @@ body {
 }
 
 .step {
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 1rem;
   padding: 1.25rem 1.25rem;
   transform: translateY(14px);
@@ -103,7 +133,7 @@ body {
 .step.is-active {
   opacity: 1;
   transform: translateY(0);
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .step h3 {
@@ -116,10 +146,14 @@ body {
 }
 
 @media (max-width: 900px) {
-  .story-inner { grid-template-columns: 1fr; }
-  .story-sticky { position: relative; top: auto; }
+  .story-inner {
+    grid-template-columns: 1fr;
+  }
+  .story-sticky {
+    position: relative;
+    top: auto;
+  }
 }
-
 
 /* =========================
    SKILLS
@@ -128,7 +162,7 @@ body {
 .skill-card {
   background: rgba(55, 65, 81, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.5rem;
   border-radius: 0.75rem;
   transition: all 0.3s ease;
@@ -146,7 +180,7 @@ body {
 
 .skill-card:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* =========================
@@ -158,13 +192,13 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 0.75rem;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 /* =========================
@@ -179,11 +213,12 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.25s ease;
+  display: inline-block;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(59,130,246,0.35);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.35);
 }
 
 /* =========================
@@ -240,9 +275,18 @@ body {
   transform-origin: left;
   transition: transform 0.1s linear;
 }
+
+/* Accessibility: reduce motion */
 @media (prefers-reduced-motion: reduce) {
-  * { scroll-behavior: auto !important; }
-  .step, .project-card, .skill-card { transition: none !important; }
+  * {
+    scroll-behavior: auto !important;
+  }
+  .step,
+  .project-card,
+  .skill-card,
+  .btn-primary {
+    transition: none !important;
+  }
 }
 
 /* =========================
@@ -252,30 +296,3 @@ body {
 footer {
   font-size: 0.875rem;
 }
-
-/* ===== Parallax glow blobs ===== */
-.hero { position: relative; overflow: hidden; }
-
-.glow {
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  filter: blur(60px);
-  opacity: 0.25;
-  border-radius: 999px;
-  transform: translateZ(0);
-  pointer-events: none;
-}
-
-.glow-1 {
-  left: -120px;
-  top: -140px;
-  background: radial-gradient(circle, rgba(59,130,246,1), transparent 60%);
-}
-
-.glow-2 {
-  right: -160px;
-  bottom: -200px;
-  background: radial-gradient(circle, rgba(99,102,241,1), transparent 60%);
-}
-
