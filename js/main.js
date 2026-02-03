@@ -75,6 +75,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// Apple-ish sticky story: highlight the step closest to viewport center
+const steps = Array.from(document.querySelectorAll(".step"));
+if (steps.length) {
+  const activateClosest = () => {
+    const mid = window.innerHeight * 0.5;
+    let best = { el: null, dist: Infinity };
+
+    steps.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      const center = r.top + r.height * 0.5;
+      const dist = Math.abs(center - mid);
+      if (dist < best.dist) best = { el, dist };
+    });
+
+    steps.forEach((el) => el.classList.remove("is-active"));
+    if (best.el) best.el.classList.add("is-active");
+  };
+
+  activateClosest();
+  window.addEventListener("scroll", activateClosest, { passive: true });
+  window.addEventListener("resize", activateClosest);
+}
+
 
 // =========================
 // Global events (outside click + ESC)
